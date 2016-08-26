@@ -17,10 +17,10 @@ class Connection
 	public function __construct($timeout = 60)
 	{
 		if (!function_exists('curl_init')) {
-            throw new Exception('BcashLibrary: cURL library is required.');
-        }
+        		throw new \Exception('BcashLibrary: cURL library is required.');
+        	}
 
-        $this->timeout = $timeout;
+		$this->timeout = $timeout;
 	}
 
 	public function post(PostRequest $request)
